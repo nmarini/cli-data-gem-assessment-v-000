@@ -27,7 +27,8 @@ class NPRCLIApp::Story
       scrape_stories << story if story.category =~ /[a-z]/i
       
     end
-    scrape_stories
+    
+    scrape_stories(0..2)
   end
 
 end
