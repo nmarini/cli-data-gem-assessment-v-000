@@ -28,7 +28,7 @@ class NPRCLIApp::CLI
     puts "- \"LIST\" to review the list of categories"
     puts "- \"The NAME of the CATEGORY\" to view stories related to that category"
     puts "- \"top story\" to view NPR's Top Story"
-    puts "- \"instructions\" to review these instructions again" # Mistake: "instructions" does produce the list of instructions but was never coded 
+    puts "- \"instructions\" to review these instructions again" # Mistake: "instructions" does produce the list of instructions but was never coded
     puts "- \"exit\" to leave"
 
   end
@@ -41,7 +41,7 @@ class NPRCLIApp::CLI
     until input == "exit"
       input = gets.strip.downcase
 
-      if @@categories.include?(input) 
+      if @@categories.include?(input)
         i = 1
         NPRCLIApp::Story.scrape_featured.each do |story|
           if story.category.downcase == input
@@ -67,6 +67,7 @@ class NPRCLIApp::CLI
       elsif input == "list"
         list_categories
       else
+        puts "ERROR: user input!"
         instructions
 
       end
