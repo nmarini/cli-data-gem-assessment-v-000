@@ -69,7 +69,6 @@ class NPRCLIApp::CLI
 
       elsif input == "instructions"
         instructions
-      end 
       else
         puts "ERROR: user input!"
         instructions
