@@ -25,10 +25,12 @@ class NPRCLIApp::Story
       story.link = article.search('a').attr('href').value
       story.teaser = article.search('p.teaser').text.gsub("\"", "")
       scrape_stories << story if story.category =~ /[a-z]/i
-      
+
     end
-    
+
     scrape_stories(0..2)
+
+    binding.pry 
   end
 
 end
