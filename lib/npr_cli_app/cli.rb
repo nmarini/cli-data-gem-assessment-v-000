@@ -66,10 +66,13 @@ class NPRCLIApp::CLI
 
       elsif input == "list"
         list_categories
+
+      elsif input == "instructions"
+        instructions
+      end 
       else
         puts "ERROR: user input!"
         instructions
-
       end
     end
   end
