@@ -29,8 +29,6 @@ class NPRCLIApp::Story
     end
 
     scrape_stories[0..2]
-
-    binding.pry
   end
 
 end
